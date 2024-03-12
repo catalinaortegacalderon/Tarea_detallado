@@ -98,13 +98,13 @@ class Metro():
         print("ESTADO DE LOS TRENES")
         for i in range(len(self.trenes)):
             print(f'El tren {i} está en la estación {self.trenes[i].estacion_actual} y se dirige hacia la {self.trenes[i].direccion} llevando a {len(self.trenes[i].pasajeros)} personas')
-            print("las estaciones a las que se dirigen son")
+            #print("las estaciones a las que se dirigen son")
             lista_auxiliar = []
-            for j in range(len(self.linea)):
-                lista_auxiliar.append(0)
-            for p in self.trenes[i].pasajeros:
-                lista_auxiliar[p.destino] += 1
-            print(lista_auxiliar)
+            #for j in range(len(self.linea)):
+            #    lista_auxiliar.append(0)
+            #for p in self.trenes[i].pasajeros:
+            #    lista_auxiliar[p.destino] += 1
+            #print(lista_auxiliar)
         print("\n")
         print("ESTADO DE LAS ESTACIONES")
         for i in range(len(self.estaciones)):
@@ -116,7 +116,7 @@ class Metro():
                     contador_derecha += 1
                 else:
                     contador_izquierda += 1
-            print(f'    {contador_derecha} personas esperando hacia la derecha y {contador_izquierda} personas esperando hacia la izquierda')
+            #print(f'    {contador_derecha} personas esperando hacia la derecha y {contador_izquierda} personas esperando hacia la izquierda')
         
         print("\n")
         print("\n")
@@ -154,11 +154,11 @@ class Tren():
         self.direccion = direccion
 
     def agregar_pasajero(self, persona: Persona):
-        print(f'Una persona ha entrado al tren {self.id}')
+        #print(f'Una persona ha entrado al tren {self.id}')
         self.pasajeros.append(persona)
 
     def dejar_pasajero(self, persona: Persona):
-        print(f'Una persona ha salido al tren {self.id}')
+        #print(f'Una persona ha salido al tren {self.id}')
         self.pasajeros.remove(persona)
 
 class Estacion():
